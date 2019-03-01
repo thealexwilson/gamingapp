@@ -1,10 +1,35 @@
-.grid-x.grid-margin-x
-  .cell.large-6
-    p
-      'Hello World
-  .cell.large-6
-    p
-      span
-        'The time is now:
-      span
-        = Time.now
+.row
+  .columns
+    ul.vertical.medium-horizontal.menu data-responsive-menu='drilldown medium-dropdown'
+      li
+        = link_to 'Item 1', '#'
+        ul.vertical.menu
+          li
+            = link_to 'Item 1A', '#'
+            ul.vertical.menu
+              li
+                = link_to 'Item 1A', '#'
+              li
+                = link_to 'Item 1B', '#'
+              li
+                = link_to 'Item 1C', '#'
+              li
+                = link_to 'Item 1D', '#'
+              li
+                = link_to 'Item 1E', '#'
+          li
+            = link_to 'Item 1B', '#'
+      li
+        = link_to 'Item 2', '#'
+        ul.vertical.menu
+          li
+            = link_to 'Item 2A', '#'
+          li
+            = link_to 'Item 2B', '#'
+      li
+        = link_to 'Item 3', '#'
+        ul.vertical.menu
+          li
+            = link_to 'Item 3A', '#'
+          li
+            = link_to 'Item 3B', '#'
