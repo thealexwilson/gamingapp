@@ -64,4 +64,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Styles
 gem 'slim', '~> 4.0'
+gem 'foundation-rails', '~> 6.5'
+gem 'autoprefixer-rails', '~> 9.4'
