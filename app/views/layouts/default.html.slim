@@ -4,12 +4,12 @@ html lang="en"
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title == content_for?(:title) ? yield(:title) : "Untitled"
+    title == content_for?(:title) ? "Gaming App - #{yield(:title)}" : 'Gaming App'
 
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
 
-  body
-
-    == yield
+  body.bg-black-100
+    = render 'nav/topbar'
+    = render 'layouts/body'

@@ -6,6 +6,11 @@
 
 // Atomics
 @import 'atomic/background';
+@import 'atomic/color';
 @import 'atomic/font_weight';
 @import 'atomic/margin';
+@import 'atomic/position';
 @import 'atomic/visibility';
+
+// Components
+@import 'components/banner';
