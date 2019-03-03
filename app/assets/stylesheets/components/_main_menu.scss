@@ -1,0 +1,60 @@
+.main-menu {
+  font-size: rem-calc(14);
+  text-transform: uppercase;
+  font-weight: 600;
+
+  > li {
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-bottom: #fff;
+    }
+
+    > a {
+      color: branding-color('lightgray', 100);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  @include breakpoint(small only) {
+    background: rgba(39,39,39, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+}
+
+//TODO: This sucks, but its to get around the foundation specificity without touching their settings file. Might be able to refactor somehow..
+.dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a::after {
+  border-top-color: branding-color('lightgray', 100);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent.is-active > a::after {
+  border-top-color: #fff;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.dropdown.menu > li.is-active > a {
+  color: #fff;
+}
+
+.is-dropdown-submenu {
+  background: rgba(39,39,39, 0.9);
+  border: none;
+  min-width: auto;
+}
+
+.dropdown .is-dropdown-submenu a {
+  color: #fff;
+  white-space: nowrap;
+
+  &:active {
+    color: #fff;
+  }
+}
