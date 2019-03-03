@@ -1,21 +1,19 @@
-/ TODO: refactor this to be bem
-
 .grid-x
-  #main-menu.ul.main-menu.vertical.large-horizontal.menu.mx-auto data-responsive-menu='large-dropdown'
-    li.p-half
+  #main-menu.ul.main-menu.menu.vertical.large-horizontal data-responsive-menu='accordion large-dropdown'
+    li
       = link_to 'Home', '#'
-    li.p-half
+    li
       = link_to 'Leaderboards', '#'
-    li.p-half
+    li
       = link_to 'LFG', '#'
-    li.p-half
+    li
       = link_to 'Global Stats', '#'
-    li.p-half
+    li
       = link_to 'Support', '#'
-      ul.vertical.menu
+      ul.main-menu__sub-menu.menu.vertical
         li
           = link_to 'Contact Us', '#'
-    li.p-half
+    li
       = link_to 'Go Premium', '#'
-    li.p-half
+    li
       = link_to 'API', '#'

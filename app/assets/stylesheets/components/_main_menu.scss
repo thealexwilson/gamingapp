@@ -2,8 +2,12 @@
   font-size: rem-calc(14);
   text-transform: uppercase;
   font-weight: 600;
+  margin: 0 auto;
+  text-align: center;
 
   > li {
+    padding: 0.5rem;
+
     &:hover {
       background: rgba(255, 255, 255, 0.2);
       border-bottom: #fff;
@@ -21,11 +25,28 @@
   @include breakpoint(small only) {
     background: rgba(39,39,39, 0.9);
     width: 100%;
-    text-align: center;
   }
 }
 
-//TODO: This sucks, but its to get around the foundation specificity without touching their settings file. Might be able to refactor somehow..
+
+.main-menu__sub-menu {
+  text-align: center;
+
+  > li {
+    padding: 0.5rem;
+
+    > a {
+      color: branding-color('lightgray', 100);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+//TODO: This sucks, but its the only quick way to override foundation specificity without touching their settings file - which I don't want to do. Want to be able to refactor somehow..
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after,
 .dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a::after {
   border-top-color: branding-color('lightgray', 100);
   border-right-color: transparent;
