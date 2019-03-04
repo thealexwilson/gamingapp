@@ -1,10 +1,10 @@
 / TODO: refactor this to a component
 
 .search-bar
-  .flex.ai-c
+  .search-bar__logo
     .c-white-100.fw-bold.text-large.show-for-large
       'TRN
-    .flex.fd-c.ws-nw.p-1
+    .search-bar__logo--sub-title
       .c-red-100.uppercase.text-small.fw-bold
         'Apex Legends
       .c-white-100.text-tiny-half.uppercase
@@ -13,13 +13,13 @@
     i.fi-magnifying-glass.text-medium
     span.ml-2.show-for-medium
       'Search
-  .flex.ai-c
-    i.fi-social-twitter.text-medium.c-lightgray-100.p-half
-    i.fi-thumbnails.text-medium.c-lightgray-100.p-half
+  .flex.ai-c.c-lightgray-100.text-medium
+    i.fi-social-twitter.p-half
+    i.fi-thumbnails.p-half
     / = link_to '#', class: 'flex ai-c'
     .flex.ai-c.p-half
-      i.fi-torso.text-medium.c-lightgray-100
-      span.ml-1.ws-nw.c-lightgray-100.fw-semibold.show-for-large
+      i.fi-torso
+      span.ws-nw.fw-semibold.text-normal.ml-half.show-for-large
         'Login or Register
     .search-bar__title-bar data-responsive-toggle='main-menu' data-hide-for='large'
       button.menu-icon data-toggle='main-menu'

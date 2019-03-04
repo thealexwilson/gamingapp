@@ -4,9 +4,32 @@
 
   @include breakpoint(medium up) {
     background: none;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 4rem;
+    margin: 0 32px;
+  }
+}
+
+.search-bar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    min-width: 129px;
+  }
+
+  @include breakpoint(large up) {
+    min-width: 233px;
+  }
+}
+
+.search-bar__logo--sub-title {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+
+  @include breakpoint(large up) {
+    margin-left: 16px;
   }
 }
 
@@ -17,15 +40,21 @@
   color: branding-color('lightgray', 100);
   margin-left: auto;
 
-  @include breakpoint(medium up) {
-    margin: 0 2rem;
-    width: 100%;
+  @include breakpoint(medium) {
+    margin: 0 auto;
+    background: rgba(255, 255, 255, .2);
+    width: 50%;
+  }
+
+  @include breakpoint(large up) {
+    margin: 0 auto;
+    width: 818px;
     background: rgba(255, 255, 255, .2);
   }
 }
 
 .search-bar__title-bar {
-  background: brandin-color('darkgray', 100);
+  background: branding-color('darkgray', 100);
   width: 100%;
   display: flex;
   padding: 0.5rem;

@@ -3,10 +3,11 @@
 
 - content_for(:banner_image) do
   .banner-image
+    / FIXME: size sucks on mobile and xlarge
     = image_tag 'lifeline_healing.jpg'
 
 - content_for(:ad_bar) do
-  = render 'ads/search'
+  = render 'ads/search_ad'
 
 .grid-x.grid-margin-x
   .cell.large-8.c-offwhite-100
