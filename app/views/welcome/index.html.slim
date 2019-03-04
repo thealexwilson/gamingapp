@@ -1,5 +1,17 @@
-- content_for(:title)
+- content_for(:title) do
   'Welcome!
 
-.c-offwhite-100
-  'hello! in welcome page index
+- content_for(:banner_image) do
+  .banner-image
+    = image_tag 'lifeline_healing.jpg'
+
+- content_for(:ad_bar) do
+  = render 'ads/search'
+
+.grid-x.grid-margin-x
+  .cell.large-8.c-offwhite-100
+    .bg-lightgray-100.full-width
+      'top div
+    .bg-darkgray-100.full-width
+      'bottom div
+  .cell.large-4.bg-darkgray-100.c-offwhite-100

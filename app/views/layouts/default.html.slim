@@ -11,6 +11,13 @@ html lang="en"
     = csrf_meta_tag
 
   body.bg-black-100
-    .banner-image
+    - if content_for?(:banner_image)
+      = yield :banner_image
+
     = render 'nav/topbar'
+
+    - if content_for?(:ad_bar)
+      .grid-container
+        = yield :ad_bar
+
     = render 'layouts/body'

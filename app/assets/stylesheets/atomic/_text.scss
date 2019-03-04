@@ -2,6 +2,7 @@ $text-tiny: rem-calc(12);
 $text-small: rem-calc(14);
 $text-normal: rem-calc(16);
 $text-medium: rem-calc(22);
+$text-larger-medium: rem-calc(28);
 $text-medium-large: rem-calc(32);
 $text-large: rem-calc(42);
 $text-xlarge: rem-calc(58);
@@ -29,6 +30,11 @@ $text-xlarge: rem-calc(58);
 .text-medium,
 .t-m {
   font-size: $text-medium;
+}
+
+.text-larger-medium,
+.t-m {
+  font-size: $text-larger-medium;
 }
 
 .text-medium-large,
