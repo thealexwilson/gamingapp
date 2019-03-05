@@ -35,6 +35,12 @@ $text-xlarge: rem-calc(58);
 .text-larger-medium,
 .t-m {
   font-size: $text-larger-medium;
+
+  &--medium-up {
+    @include breakpoint(medium up) {
+      font-size: $text-larger-medium;
+    }
+  }
 }
 
 .text-medium-large,

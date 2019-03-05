@@ -1,8 +1,8 @@
 .half-width {
   width: 50%;
 
-  &--medium-up {
-    @include breakpoint(medium up) {
+  &--large-up {
+    @include breakpoint(large up) {
       width: 50%;
     }
   }

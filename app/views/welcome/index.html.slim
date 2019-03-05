@@ -2,9 +2,7 @@
   'Welcome!
 
 - content_for(:banner_image) do
-  .banner-image
-    / FIXME: size sucks on mobile and xlarge
-    = image_tag 'lifeline_healing.jpg'
+  .banner-image style='background-image: url(/assets/lifeline_healing.jpg)'
 
 - content_for(:ad_bar) do
   = render 'ads/search_ad'
