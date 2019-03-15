@@ -1,5 +1,5 @@
 // FIXME: i dont like that i'm overriding "standard" colors here... maybe try to find a nice name for these that don't conflict with "standard" color names
-$branding-hues: ('black', 'gray', 'darkgray', 'mediumgray', 'lightgray', 'offwhite', 'red');
+$branding-hues: ('black', 'gray', 'darkgray', 'mediumgray', 'lightgray', 'offwhite', 'teal');
 $named-color-hues: ('white');
 
 @function branding-color($hue, $value: 100) {
@@ -37,7 +37,7 @@ $branding-colors: (
         'mediumgray': #9a9a9a,
         'lightgray': rgba(239,239,239,.8),
         'offwhite': #efefef,
-        'red': #da292a
+        'teal': #00cdcd
 );
 
 $named-colors: (
@@ -52,7 +52,7 @@ $branding-color-atomics: (
         'mediumgray': $standard-atomic-mix-values,
         'lightgray': $standard-atomic-mix-values,
         'offwhite': $standard-atomic-mix-values,
-        'red': $standard-atomic-mix-values
+        'teal': $standard-atomic-mix-values
 );
 
 $named-color-atomics: (

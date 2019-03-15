@@ -2,15 +2,37 @@
   'Welcome!
 
 - content_for(:banner_image) do
-  .banner-image style='background-image: url(/assets/lifeline_healing.jpg)'
+  .banner-image style='background-image: url(/assets/air_combat.png)'
 
 - content_for(:ad_bar) do
   = render 'ads/search_ad'
 
-.grid-x.grid-margin-x
-  .cell.large-8.c-offwhite-100
-    .bg-lightgray-100.full-width
+.grid-x.grid-margin-x.c-offwhite-100.mb-1
+  .cell.large-12.bg-darkgray-100.flex.p-1
+    .bg-darkgray-100
+      'USER IMAGE
+      'USER NAME
+      'PLATFORM
+    button.ml-auto.c-offwhite-100.p-1
+      'add to platform
+  .cell.large-12.bg-darkgray-100
+    'OVERVIEW
+    'MATCHES
+.grid-x.grid-margin-x.mb-2
+  .cell.large-12.flex
+    button.c-offwhite-100
+      'add stuff
+    span.ml-auto.c-offwhite-100
+      'STAT TRACKER UPDATING SOON
+
+.grid-x.grid-margin-x.c-offwhite-100
+  .cell.large-8
+    .bg-lightgray-100
       'top div
-    .bg-darkgray-100.full-width
+    .bg-darkgray-100
       'bottom div
-  .cell.large-4.bg-darkgray-100.c-offwhite-100
+    .bg-darkgray-100.mt-2
+      'bottom div
+  .cell.large-4
+    .bg-darkgray-100
+      'bottom div
