@@ -6,6 +6,8 @@
 
 // Atomics
 @import 'atomic/background';
+@import 'atomic/border';
+@import 'atomic/border_color';
 @import 'atomic/border_radius';
 @import 'atomic/color';
 @import 'atomic/font_weight';
@@ -20,7 +22,9 @@
 
 // Components
 @import 'components/banner';
+@import 'components/button';
 @import 'components/main_menu';
+@import 'components/profile_image';
 @import 'components/search_bar';
 @import 'components/search_logos';
 @import 'components/topbar';

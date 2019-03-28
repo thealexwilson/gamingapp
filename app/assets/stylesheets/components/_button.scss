@@ -1,0 +1,91 @@
+@mixin button-colors($bg, $color, $hollow: false) {
+  background-color: $bg;
+  color: $color;
+  border: 1px solid;
+
+  @if $hollow == false {
+    border-color: $bg;
+  }
+
+  &:visited {
+    color: $color;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    @if $hollow == true {
+      background-color: $bg;
+      color: lighten($color, 15%);
+    } @else {
+      color: $color;
+      background-color: lighten($bg, 15%);
+      border-color: lighten($bg, 15%);
+    }
+  }
+}
+
+
+.btn {
+  $btn-padding: 9px $global-padding;
+  $fat-btn-padding: 13px $global-padding;
+  $btn-font-size: 16px;
+  $btn-border-radius: 3px;
+  $btn-rounded-border-radius: 18px;
+  $btn-fat-rounded-border-radius: 22px;
+  $hues: ('black', 'gray', 'darkgray', 'mediumgray', 'lightgray', 'offwhite', 'teal');
+
+  @include button-colors(branding-color('teal'), $white);
+
+  border-radius: $btn-border-radius;
+  display: inline-flex;
+  cursor: pointer;
+  font-weight: $fw-semibold;
+  font-size: $btn-font-size;
+  padding: $btn-padding;
+  line-height: 1;
+  width: 100%;
+  justify-content: center;
+
+  @include breakpoint(medium up) {
+    width: auto;
+    justify-content: left;
+  }
+
+  svg + span,
+  img + span {
+    margin-left: (18px / 3);
+  }
+
+  span + svg,
+  span + img {
+    margin-left: (18px / 3);
+  }
+
+  @each $hue in $hues {
+    &--#{$hue} {
+      @include button-colors(
+        named-color($hue),
+        $white
+      );
+    }
+  }
+
+  &--hollow {
+    @include button-colors(
+      transparent,
+      branding-color('teal'),
+      $hollow: true
+    );
+
+    @each $hue in $hues {
+      &.btn--#{$hue} {
+        @include button-colors(
+          $white,
+          named-color($hue),
+          $hollow: true
+        )
+      }
+    }
+  }
+}

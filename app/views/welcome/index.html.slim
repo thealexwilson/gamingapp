@@ -8,13 +8,14 @@
   = render 'ads/search_ad'
 
 .grid-x.grid-margin-x.c-offwhite-100.mb-1
-  .cell.large-12.bg-darkgray-100.flex.p-1
-    .bg-darkgray-100
-      'USER IMAGE
-      'USER NAME
-      'PLATFORM
-    button.ml-auto.c-offwhite-100.p-1
-      'add to platform
+  .cell.large-12.bg-darkgray-100.flex.p-1-and-half
+    .bg-darkgray-100.flex.ai-c
+      = image_tag 'https://secure.download.dm.origin.com/production/avatar/prod/userAvatar/26287185/208x208.JPEG', class: 'profile-image'
+      .ml-1.text-medium-large.fw-bold
+        'XZISTTT
+      i.fi-social-windows.text-large.ml-1
+    button.btn.btn--hollow.ml-auto
+      'add to favorites
   .cell.large-12.bg-darkgray-100
     'OVERVIEW
     'MATCHES
