@@ -27,9 +27,9 @@
 
 
 .btn {
-  $btn-padding: 9px $global-padding;
+  $btn-padding: 0 $global-padding;
   $fat-btn-padding: 13px $global-padding;
-  $btn-font-size: 16px;
+  $btn-font-size: 14px;
   $btn-border-radius: 3px;
   $btn-rounded-border-radius: 18px;
   $btn-fat-rounded-border-radius: 22px;
@@ -40,12 +40,15 @@
   border-radius: $btn-border-radius;
   display: inline-flex;
   cursor: pointer;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: $fw-semibold;
   font-size: $btn-font-size;
+  text-transform: uppercase;
   padding: $btn-padding;
   line-height: 1;
   width: 100%;
   justify-content: center;
+  height: 42px;
 
   @include breakpoint(medium up) {
     width: auto;
